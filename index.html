@@ -8,20 +8,38 @@
     <title>PÓKER</title>
     <link rel="stylesheet" href="./card.css">
     <script src="./card.js" defer></script>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            gap:20px;
+            align-items: stretch;
+
+        }
+
+        my-card {
+            display: block;
+            min-width: 200px;
+            max-width: 500px;
+        }
+    </style>
 </head>
 
 <body>
-    <!--♠, ♥, ♦, ♣.-->
-    <div class="card">
-        <div class="value">
-            <div class="number">A</div>
-            <div class="sign">♥</div>
-        </div>
 
-        <div class="sign">♥</div>
-        <div class="number">A</div>
-        <div class="sign">♥</div>
-    </div>
-</body>
+    <my-card data-ertek="8" data-sign="3"></my-card>
+
+    <script>
+        for (let i = 1; i < 14; i++) {
+            let kartya = document.createElement('my-card');
+            kartya.dataset.ertek = i;
+            kartya.dataset.sign = 0;
+            document.body.appendChild(kartya);
+
+        }
+
+        </script>
+
+        </body>
 
 </html>
