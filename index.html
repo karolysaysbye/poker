@@ -14,7 +14,7 @@
             flex-wrap: wrap;
             gap:20px;
             align-items: stretch;
-
+            background-color: aqua;
         }
 
         my-card {
@@ -26,9 +26,7 @@
 </head>
 
 <body>
-
     <my-card data-ertek="8" data-sign="3"></my-card>
-
     <script>
         for (let i = 1; i < 14; i++) {
             let kartya = document.createElement('my-card');
@@ -37,9 +35,6 @@
             document.body.appendChild(kartya);
 
         }
-
         </script>
-
         </body>
-
 </html>
